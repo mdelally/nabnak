@@ -6,6 +6,14 @@ import "./registerServiceWorker";
 
 Vue.config.productionTip = false;
 
+import "./assets/css/tailwind.css";
+
+import UI from "./components/ui";
+
+UI.forEach(c => {
+  Vue.component(c.name, c);
+});
+
 new Vue({
   router,
   store,
